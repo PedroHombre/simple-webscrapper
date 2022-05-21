@@ -6,7 +6,6 @@ data = []
 
 url = "https://www.filtry-dpf-fap.pl/katalog-filtrow-dpf-fap-scr-cena"
 
-
 result = requests.get(url)
 doc = BeautifulSoup(result.text, "html.parser")
 
@@ -104,4 +103,5 @@ for marka, model, pojemnosc, oznaczenieSilnika, lataProdukcji, zamiennikJMJ, num
     worksheet.write(row, col + 16, normaEmisjiSpalin)
     row += 1
 
+print('file created')
 workbook.close()
